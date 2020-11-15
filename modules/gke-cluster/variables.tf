@@ -74,6 +74,12 @@ variable "http_load_balancing" {
   default     = true
 }
 
+variable "enable_dns_cache" {
+  description = "NodeLocal DNSCache improves DNS lookup latency, makes DNS lookup times more consistent, and reduces the number of DNS queries to kube-dns by running a DNS cache on each cluster node."
+  type        = bool
+  default     = true
+}
+
 variable "enable_private_nodes" {
   description = "Control whether nodes have internal IP addresses only. If enabled, all nodes are given only RFC 1918 private addresses and communicate with the master via private networking."
   type        = bool
